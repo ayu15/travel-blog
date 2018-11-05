@@ -1,14 +1,26 @@
 import * as React from 'react';
-import Button from '@material-ui/core/Button';
+import * as PropTypes from 'prop-types';
+import { withStyles } from '@material-ui/core/styles';
+import HalfBox from './half-box';
 
-export default class LayoutContainer extends React.Component {
-  render() {
-    return (
-      <div>
-        <Button variant="contained" color="primary">
-          Hello World
-        </Button>
-      </div>
-    );
+const styles = {
+  root: {
+    display: 'grid',
+    gridTemplateColumns: '1fr 1fr'
   }
+};
+
+function LayoutContainer(props) {
+  const { classes, children } = props;
+  const childElements = children.map((child, index) => {
+    return <HalfBox key={index.toString()}>{child()}</HalfBox>;
+  });
+
+  return <div className={classes.root}>{childElements}</div>;
 }
+
+LayoutContainer.propTypes = {
+  classes: PropTypes.object.isRequired
+};
+
+export default withStyles(styles)(LayoutContainer);
