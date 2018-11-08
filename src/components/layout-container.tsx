@@ -6,7 +6,8 @@ import HalfBox from './half-box';
 const styles = {
   root: {
     display: 'grid',
-    gridTemplateColumns: '1fr 1fr'
+    gridTemplateColumns: '1fr 1fr',
+    maxHeight: '100%'
   }
 };
 
