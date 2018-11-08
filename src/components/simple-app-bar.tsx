@@ -1,39 +1,53 @@
 import * as React from 'react';
 import * as PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
+import { StaticQuery, graphql } from 'gatsby';
 
-const styles = {
-  root: {
-    flexGrow: 1
-  }
-};
-
-const custom = {
+const style = {
   backgroundColor: '#333',
   color: '#fff'
 };
 
-function SimpleAppBar(props) {
-  const { classes } = props;
-
+const _simpleAppBar = ({ data }) => {
+  const title = data.site.siteMetadata.title;
   return (
-    <div className={classes.root}>
-      <AppBar position="static" style={custom}>
+    <div>
+      <AppBar position="static" style={style}>
         <Toolbar>
           <Typography variant="h5" color="inherit">
-            My Adventure story
+            {title}
           </Typography>
         </Toolbar>
       </AppBar>
     </div>
   );
-}
-
-SimpleAppBar.propTypes = {
-  classes: PropTypes.object.isRequired
 };
 
-export default withStyles(styles)(SimpleAppBar);
+const SimpleAppBar = () => (
+  <StaticQuery
+    query={graphql`
+      query {
+        site {
+          siteMetadata {
+            title
+          }
+        }
+      }
+    `}
+    render={data => <_simpleAppBar data={data} />}
+  />
+);
+
+_simpleAppBar.propTypes = {
+  data: PropTypes.shape({
+    site: PropTypes.shape({
+      siteMetadata: PropTypes.shape({
+        title: PropTypes.string.isRequired
+      }).isRequired
+    }).isRequired
+  }).isRequired
+};
+
+export default SimpleAppBar;
