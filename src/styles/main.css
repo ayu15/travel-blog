@@ -1,0 +1,18 @@
+/* Mobile view */
+@media (max-width: 620px) {
+}
+
+/* Desktop view */
+@media (min-width: 621px) {
+  .app-root {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr;
+  }
+
+  .layout-root {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-height: 100%;
+  }
+}
