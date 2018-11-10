@@ -12,7 +12,7 @@ const LayoutContainer = props => {
 };
 
 LayoutContainer.propTypes = {
-  children: PropTypes.object.isRequired
+  children: PropTypes.array.isRequired
 };
 
 export default LayoutContainer;

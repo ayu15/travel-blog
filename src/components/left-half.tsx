@@ -10,8 +10,9 @@ const primaryImage = {
 };
 
 const _leftHalf = ({ data }) => {
-  const imageURL = data.allMarkdownRemark.edges[0].node.frontmatter.imageURL;
-  const imageTitle = data.allMarkdownRemark.edges[0].node.frontmatter.imageTitle;
+  const homePage = data.allMarkdownRemark.edges.find(x => x.node.frontmatter.title === 'HOMEPAGE');
+  const imageURL = homePage.node.frontmatter.imageURL;
+  const imageTitle = homePage.node.frontmatter.imageTitle;
   return <img src={imageURL} alt={imageTitle} style={primaryImage} />;
 };
 
@@ -25,8 +26,12 @@ const LeftHalf = () => {
               node {
                 id
                 frontmatter {
-                  imageURL
+                  title
+                  date
+                  subtitle
+                  thumb
                   imageTitle
+                  imageURL
                 }
               }
             }
@@ -45,8 +50,9 @@ _leftHalf.propTypes = {
         PropTypes.shape({
           node: PropTypes.shape({
             frontmatter: PropTypes.shape({
-              imageURL: PropTypes.string.isRequired,
-              imageTitle: PropTypes.string.isRequired
+              title: PropTypes.string,
+              imageURL: PropTypes.string,
+              imageTitle: PropTypes.string
             }).isRequired
           }).isRequired
         }).isRequired

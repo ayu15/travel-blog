@@ -1,5 +1,6 @@
 ---
-imageTitle: 'Left Pic'
+title: 'HOMEPAGE'
+imageTitle: 'Primary Pic'
 imageURL: 'http://www.hashtagbylily.com/wp-content/uploads/2016/02/travel-blogger.jpg'
 ---
 
