@@ -1,5 +1,7 @@
 ---
+template: 'side-masonry'
 title: 'HOMEPAGE'
+date: 'Nov 21, 2018'
 imageTitle: 'Primary Pic'
 imageURL: 'http://www.hashtagbylily.com/wp-content/uploads/2016/02/travel-blogger.jpg'
 ---
