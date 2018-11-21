@@ -4,17 +4,9 @@ import { graphql } from 'gatsby';
 const SideMasonryTemplate = ({ data }) => {
   const { markdownRemark } = data;
   const title = markdownRemark.frontmatter.title;
-  const html = markdownRemark.html;
   return (
     <div>
-      <h1 style={{ fontFamily: 'avenir' }}>{title}</h1>
-      <div
-        className="blogpost"
-        dangerouslySetInnerHTML={{ __html: html }}
-        style={{
-          fontFamily: 'avenir'
-        }}
-      />
+      <h1>{title}</h1>
     </div>
   );
 };

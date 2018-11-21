@@ -1,21 +1,18 @@
 import * as React from 'react';
 import { graphql } from 'gatsby';
+import LeftHalf from './left-half';
+import RightHalf from './right-half';
+import LayoutContainer from '../../components/layout-container';
+import SimpleAppBarLayout from '../../layouts/simple-app-bar';
 
 const FiftyFiftyTemplate = ({ data }) => {
   const { markdownRemark } = data;
-  const title = markdownRemark.frontmatter.title;
-  const html = markdownRemark.html;
   return (
-    <div>
-      <h1 style={{ fontFamily: 'avenir' }}>{title}</h1>
-      <div
-        className="blogpost"
-        dangerouslySetInnerHTML={{ __html: html }}
-        style={{
-          fontFamily: 'avenir'
-        }}
-      />
-    </div>
+    <React.Fragment>
+      <SimpleAppBarLayout data={markdownRemark} />
+      {/* <h1>{title}</h1>
+      <LayoutContainer children={[LeftHalf, RightHalf]} /> */}
+    </React.Fragment>
   );
 };
 
