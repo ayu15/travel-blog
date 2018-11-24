@@ -9,6 +9,7 @@ const primaryImage = {
 };
 
 const LeftHalf = ({ data }) => {
+  console.log('data received in left half is', data);
   const { imageURL, imageTitle } = data;
   return <img src={imageURL} alt={imageTitle} style={primaryImage} />;
 };

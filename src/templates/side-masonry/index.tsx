@@ -1,22 +1,41 @@
 import * as React from 'react';
 import { graphql } from 'gatsby';
+import SimpleAppBarLayout from '../../layouts/simple-app-bar';
+import LeftHalf from './left-half';
+import RightHalf from './right-half';
 
 const SideMasonryTemplate = ({ data }) => {
-  const { markdownRemark } = data;
-  const title = markdownRemark.frontmatter.title;
+  const homepage = data.edges.find(edge => {
+    return edge.node.frontmatter.title === 'HOMEPAGE';
+  });
   return (
-    <div>
-      <h1>{title}</h1>
-    </div>
+    <React.Fragment>
+      <div className="app-root">
+        <SimpleAppBarLayout />
+        <div className="fifty-fifty-root">
+          <LeftHalf data={homepage.node.frontmatter} />
+          <RightHalf data={homepage.node.frontmatter} />
+        </div>
+      </div>
+    </React.Fragment>
   );
 };
 
 export const query = graphql`
-  query($pathSlug: String!) {
-    markdownRemark(fields: { slug: { eq: $pathSlug } }) {
-      html
-      frontmatter {
-        title
+  query {
+    allMarkdownRemark {
+      edges {
+        node {
+          frontmatter {
+            title
+            imageURL
+            imageTitle
+            subtitle
+          }
+          fields {
+            slug
+          }
+        }
       }
     }
   }

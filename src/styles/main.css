@@ -10,7 +10,7 @@
     grid-template-rows: auto 1fr;
   }
 
-  .layout-root {
+  .fifty-fifty-root {
     display: grid;
     grid-template-columns: 1fr 1fr;
     max-height: 100%;

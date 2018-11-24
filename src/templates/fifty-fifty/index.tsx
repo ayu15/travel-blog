@@ -1,17 +1,21 @@
 import * as React from 'react';
 import { graphql } from 'gatsby';
+
+import SimpleAppBarLayout from '../../layouts/simple-app-bar';
 import LeftHalf from './left-half';
 import RightHalf from './right-half';
-import LayoutContainer from '../../components/layout-container';
-import SimpleAppBarLayout from '../../layouts/simple-app-bar';
 
 const FiftyFiftyTemplate = ({ data }) => {
   const { markdownRemark } = data;
   return (
     <React.Fragment>
-      <SimpleAppBarLayout data={markdownRemark} />
-      {/* <h1>{title}</h1>
-      <LayoutContainer children={[LeftHalf, RightHalf]} /> */}
+      <div className="app-root">
+        <SimpleAppBarLayout />
+        <div className="fifty-fifty-root">
+          <LeftHalf data={markdownRemark.frontmatter} />
+          <RightHalf data={markdownRemark.frontmatter} />
+        </div>
+      </div>
     </React.Fragment>
   );
 };
@@ -19,9 +23,11 @@ const FiftyFiftyTemplate = ({ data }) => {
 export const query = graphql`
   query($pathSlug: String!) {
     markdownRemark(fields: { slug: { eq: $pathSlug } }) {
-      html
       frontmatter {
         title
+        imageURL
+        imageTitle
+        subtitle
       }
     }
   }
