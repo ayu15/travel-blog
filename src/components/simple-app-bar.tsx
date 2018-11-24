@@ -13,7 +13,7 @@ const style = {
 const _simpleAppBar = ({ data }) => {
   const title = data.site.siteMetadata.title;
   return (
-    <div>
+    <React.Fragment>
       <AppBar position="static" style={style}>
         <Toolbar>
           <Typography variant="h5" color="inherit">
@@ -21,7 +21,7 @@ const _simpleAppBar = ({ data }) => {
           </Typography>
         </Toolbar>
       </AppBar>
-    </div>
+    </React.Fragment>
   );
 };
 
