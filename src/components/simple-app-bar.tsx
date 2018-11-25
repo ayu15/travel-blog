@@ -10,16 +10,23 @@ const style = {
   color: '#fff'
 };
 
+const hiddenTrick = {
+  visibility: 'hidden'
+};
+
 const _simpleAppBar = ({ data }) => {
   const title = data.site.siteMetadata.title;
   return (
     <React.Fragment>
-      <AppBar position="static" style={style}>
+      <AppBar position="fixed" style={style}>
         <Toolbar>
           <Typography variant="h5" color="inherit">
             {title}
           </Typography>
         </Toolbar>
+      </AppBar>
+      <AppBar position="static" style={hiddenTrick}>
+        <Toolbar />
       </AppBar>
     </React.Fragment>
   );

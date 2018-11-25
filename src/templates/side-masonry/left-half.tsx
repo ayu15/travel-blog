@@ -1,6 +1,17 @@
 import * as React from 'react';
 import * as PropTypes from 'prop-types';
 
+const dummyDuplicate = {
+  visibility: 'hidden'
+};
+
+const fixedContainer = {
+  position: 'fixed',
+  left: 0,
+  width: '49vw',
+  height: '100%'
+};
+
 const primaryImage = {
   objectFit: 'cover',
   objectPosition: 'center top',
@@ -9,9 +20,15 @@ const primaryImage = {
 };
 
 const LeftHalf = ({ data }) => {
-  console.log('data received in left half is', data);
   const { imageURL, imageTitle } = data;
-  return <img src={imageURL} alt={imageTitle} style={primaryImage} />;
+  return (
+    <React.Fragment>
+      <div style={dummyDuplicate} />
+      <div style={fixedContainer}>
+        <img src={imageURL} alt={imageTitle} style={primaryImage} />
+      </div>
+    </React.Fragment>
+  );
 };
 
 LeftHalf.propTypes = {

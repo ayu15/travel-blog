@@ -14,7 +14,7 @@ const SideMasonryTemplate = ({ data }) => {
         <SimpleAppBarLayout />
         <div className="fifty-fifty-root">
           <LeftHalf data={homepage.node.frontmatter} />
-          <RightHalf data={homepage.node.frontmatter} />
+          <RightHalf allMarkdownRemark={data} />
         </div>
       </div>
     </React.Fragment>
