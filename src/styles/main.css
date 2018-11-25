@@ -15,4 +15,14 @@
     grid-template-columns: 1fr 1fr;
     max-height: 100%;
   }
+
+  .masonry-root {
+    column-count: 2;
+    margin: 0.5rem;
+  }
+
+  .masonry-item {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
 }

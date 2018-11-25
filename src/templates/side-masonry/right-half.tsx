@@ -1,18 +1,34 @@
 import * as React from 'react';
 import * as PropTypes from 'prop-types';
+import { PostCollectionI, PostInfoI } from '../../types';
+import PostPreview from '../../components/post-preview';
 
-const RightHalf = ({ data }) => {
-  const { title, subtitle } = data;
-  return (
-    <div className="fifty-fifty-right-half-root">
-      <h1>{title}</h1>
-      <p>{subtitle}</p>
-    </div>
-  );
+const RightHalf = ({ allMarkdownRemark }: PostCollectionI) => {
+  let items: PostInfoI[] = allMarkdownRemark.edges.map(post => {
+    const itemModel = {
+      title: post.node.frontmatter.title,
+      subtitle: post.node.frontmatter.subtitle,
+      imageURL: post.node.frontmatter.imageURL,
+      imageTitle: post.node.frontmatter.imageTitle,
+      slug: post.node.fields.slug
+    };
+    return itemModel;
+  });
+  items = items.filter(item => {
+    return item.title !== 'HOMEPAGE';
+  });
+  const posts = items.map((item, index) => {
+    return (
+      <div className="masonry-item" key={index}>
+        <PostPreview postInfo={item} />
+      </div>
+    );
+  });
+  return <div className="masonry-root">{posts}</div>;
 };
 
 RightHalf.propTypes = {
-  data: PropTypes.shape({
+  allMarkdownRemark: PropTypes.shape({
     title: PropTypes.string,
     subtitle: PropTypes.string
   }).isRequired
