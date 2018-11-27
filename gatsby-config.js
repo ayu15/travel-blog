@@ -13,6 +13,7 @@ module.exports = {
         name: `pages`,
         path: `${__dirname}/src/pages`
       }
-    }
+    },
+    `gatsby-plugin-sass`
   ]
 };

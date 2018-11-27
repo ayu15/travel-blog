@@ -1,0 +1,60 @@
+/* Desktop view */
+@media (min-width: 721px) {
+  .app-root {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr;
+  }
+
+  .fifty-fifty-root {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 1rem;
+    max-height: 100%;
+
+    .primary-image-container {
+      position: fixed;
+      left: 0;
+      width: 49vw;
+      height: 100%;
+    }
+  }
+
+  .masonry-root {
+    column-count: 2;
+    margin: 0.5rem;
+  }
+
+  .masonry-item {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+}
+
+/* Mobile view */
+@media (max-width: 720px) {
+  .fifty-fifty-root {
+    .primary-image-container {
+      height: 80vh;
+    }
+  }
+
+  .masonry-root {
+    column-count: 2;
+    margin: 0.5rem;
+  }
+}
+
+/* Small Mobile view */
+@media (max-width: 420px) {
+  .fifty-fifty-root {
+    .primary-image-container {
+      height: 80vh;
+    }
+  }
+
+  .masonry-root {
+    column-count: 1;
+    margin: 0.5rem;
+  }
+}

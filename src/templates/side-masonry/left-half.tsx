@@ -5,13 +5,6 @@ const dummyDuplicate = {
   visibility: 'hidden'
 };
 
-const fixedContainer = {
-  position: 'fixed',
-  left: 0,
-  width: '49vw',
-  height: '100%'
-};
-
 const primaryImage = {
   objectFit: 'cover',
   objectPosition: 'center top',
@@ -24,7 +17,7 @@ const LeftHalf = ({ data }) => {
   return (
     <React.Fragment>
       <div style={dummyDuplicate} />
-      <div style={fixedContainer}>
+      <div className="primary-image-container">
         <img src={imageURL} alt={imageTitle} style={primaryImage} />
       </div>
     </React.Fragment>
