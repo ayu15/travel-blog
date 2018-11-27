@@ -3,7 +3,7 @@ import * as PropTypes from 'prop-types';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import { StaticQuery, graphql } from 'gatsby';
+import { StaticQuery, graphql, Link } from 'gatsby';
 
 const style = {
   backgroundColor: '#333',
@@ -20,9 +20,11 @@ const _simpleAppBar = ({ data }) => {
     <React.Fragment>
       <AppBar position="fixed" style={style}>
         <Toolbar>
-          <Typography variant="h5" color="inherit">
-            {title}
-          </Typography>
+          <Link to={'/'} style={{ textDecoration: 'none', color: 'inherit' }}>
+            <Typography variant="h5" color="inherit">
+              {title}
+            </Typography>
+          </Link>
         </Toolbar>
       </AppBar>
       <AppBar position="static" style={hiddenTrick}>
