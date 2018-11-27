@@ -18,10 +18,15 @@ const PostPreview = props => {
         <CardActionArea>
           <CardMedia component="img" alt={postInfo.imageTitle} image={postInfo.imageURL} title={postInfo.imageTitle} />
           <CardContent>
-            <Typography gutterBottom variant="h5" component="h2">
+            <Typography variant="headline" color="primary">
               {postInfo.title}
             </Typography>
-            <Typography component="p">{postInfo.subtitle}</Typography>
+            <Typography gutterBottom variant="caption" color="secondary" paragraph>
+              {postInfo.date}
+            </Typography>
+            <Typography variant="subtitle1" color="textSecondary">
+              {postInfo.subtitle}
+            </Typography>
           </CardContent>
         </CardActionArea>
       </Link>

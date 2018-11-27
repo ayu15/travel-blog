@@ -5,6 +5,7 @@ export interface PostI {
       imageURL: string;
       imageTitle: string;
       subtitle: string;
+      date: string;
     };
     fields: {
       slug: string;

@@ -28,6 +28,7 @@ export const query = graphql`
         imageURL
         imageTitle
         subtitle
+        date
       }
     }
   }

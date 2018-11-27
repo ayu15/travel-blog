@@ -10,6 +10,7 @@ const RightHalf = ({ allMarkdownRemark }: PostCollectionI) => {
       subtitle: post.node.frontmatter.subtitle,
       imageURL: post.node.frontmatter.imageURL,
       imageTitle: post.node.frontmatter.imageTitle,
+      date: post.node.frontmatter.date,
       slug: post.node.fields.slug
     };
     return itemModel;
