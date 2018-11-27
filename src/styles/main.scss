@@ -18,6 +18,15 @@
       width: 49vw;
       height: 100%;
     }
+
+    .preview-image {
+      transform: scale(1);
+      transition: 0.3s ease-in-out;
+
+      &:hover {
+        transform: scale(1.3) !important;
+      }
+    }
   }
 
   .masonry-root {

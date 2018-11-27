@@ -15,8 +15,14 @@ const PostPreview = props => {
   return (
     <Card style={cardStyle}>
       <Link to={postInfo.slug} style={{ textDecoration: 'none' }}>
+        <CardMedia
+          component="img"
+          className="preview-image"
+          alt={postInfo.imageTitle}
+          image={postInfo.imageURL}
+          title={postInfo.imageTitle}
+        />
         <CardActionArea>
-          <CardMedia component="img" alt={postInfo.imageTitle} image={postInfo.imageURL} title={postInfo.imageTitle} />
           <CardContent>
             <Typography variant="headline" color="primary">
               {postInfo.title}
