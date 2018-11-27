@@ -6,6 +6,7 @@ export interface PostI {
       imageTitle: string;
       subtitle: string;
       date: string;
+      thumb: string;
     };
     fields: {
       slug: string;

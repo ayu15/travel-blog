@@ -32,6 +32,7 @@ export const query = graphql`
             imageTitle
             subtitle
             date
+            thumb
           }
           fields {
             slug
