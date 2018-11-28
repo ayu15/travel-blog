@@ -4,6 +4,6 @@ date: 'Nov 21, 2018'
 title: 'HOMEPAGE'
 subtitle: 'SOME SUNTITLE'
 imageTitle: 'Primary Pic'
-imageURL: 'http://www.hashtagbylily.com/wp-content/uploads/2016/02/travel-blogger.jpg'
+imageURL: 'https://res.cloudinary.com/blogs1/image/upload/v1543390654/blog1/originals/travel-blogger.jpg'
 thumb: 'thumb pic url'
 ---

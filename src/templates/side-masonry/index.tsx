@@ -5,7 +5,8 @@ import LeftHalf from './left-half';
 import RightHalf from './right-half';
 
 const SideMasonryTemplate = ({ data }) => {
-  const homepage = data.edges.find(edge => {
+  const { allMarkdownRemark } = data;
+  const homepage = allMarkdownRemark.edges.find(edge => {
     return edge.node.frontmatter.title === 'HOMEPAGE';
   });
   return (
@@ -14,7 +15,7 @@ const SideMasonryTemplate = ({ data }) => {
         <SimpleAppBarLayout />
         <div className="fifty-fifty-root">
           <LeftHalf data={homepage.node.frontmatter} />
-          <RightHalf allMarkdownRemark={data} />
+          <RightHalf allMarkdownRemark={allMarkdownRemark} />
         </div>
       </div>
     </React.Fragment>
