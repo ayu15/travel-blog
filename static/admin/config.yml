@@ -22,8 +22,9 @@ collections:
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     fields:
       - { label: 'Template Key', name: 'template', widget: 'hidden', default: 'fifty-fifty' }
-      - { label: 'Publish Date', name: 'date', widget: 'string' }
+      - { label: 'Publish Date', name: 'date', widget: 'date', format: 'MMM DD, YYYY' }
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Subtitle', name: 'subtitle', widget: 'text' }
-      - { label: 'Pics', name: 'imageURL', widget: 'string' }
+      - { label: 'Pics', name: 'imageURL', widget: 'image' }
       - { label: 'Pics Title', name: 'imageTitle', widget: 'string' }
+      - { label: 'Thumbnail pic', name: 'thumb', widget: 'image' }
