@@ -3,7 +3,7 @@ backend:
   repo: ayu15/travel-blog
   branch: deployment # Branch to update (optional; defaults to master)
 
-media_folder: 'static/img' # Media files will be stored in the repo under images/uploads
+media_folder: 'src/assets/img' # Media files will be stored in the repo under src/assets/img
 public_folder: '/img'
 
 # The src attribute for uploaded media will begin with /images/uploads
@@ -27,4 +27,4 @@ collections:
       - { label: 'Subtitle', name: 'subtitle', widget: 'text' }
       - { label: 'Pics', name: 'imageURL', widget: 'image' }
       - { label: 'Pics Title', name: 'imageTitle', widget: 'string' }
-      - { label: 'Thumbnail pic', name: 'thumb', widget: 'image' }
+      - { label: 'Thumbnail pic', name: 'thumbURL', widget: 'image' }

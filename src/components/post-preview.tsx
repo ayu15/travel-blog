@@ -19,7 +19,7 @@ const PostPreview = props => {
           component="img"
           className="preview-image"
           alt={postInfo.imageTitle}
-          image={postInfo.thumb}
+          image={postInfo.thumbURL}
           title={postInfo.imageTitle}
         />
         <CardActionArea>

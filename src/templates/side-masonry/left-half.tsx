@@ -14,11 +14,12 @@ const primaryImage = {
 
 const LeftHalf = ({ data }) => {
   const { imageURL, imageTitle } = data;
+  const relImageURL = `../../assets${imageURL}`;
   return (
     <React.Fragment>
       <div style={dummyDuplicate} />
       <div className="primary-image-container">
-        <img src={imageURL} alt={imageTitle} style={primaryImage} />
+        <img src={relImageURL} alt={imageTitle} style={primaryImage} />
       </div>
     </React.Fragment>
   );

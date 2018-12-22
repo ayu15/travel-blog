@@ -36,7 +36,7 @@ const SideMasonryHome = () => {
                   imageTitle
                   subtitle
                   date
-                  thumb
+                  thumbURL
                 }
                 fields {
                   slug
