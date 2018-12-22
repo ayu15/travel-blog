@@ -5,6 +5,7 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 import { Link } from 'gatsby';
+import { withPrefix } from 'gatsby';
 
 const cardStyle = {
   marginBottom: '1rem'
@@ -19,7 +20,7 @@ const PostPreview = props => {
           component="img"
           className="preview-image"
           alt={postInfo.imageTitle}
-          image={postInfo.thumbURL}
+          image={withPrefix(postInfo.thumbURL)}
           title={postInfo.imageTitle}
         />
         <CardActionArea>

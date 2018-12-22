@@ -1,5 +1,6 @@
 import * as React from 'react';
 import * as PropTypes from 'prop-types';
+import { withPrefix } from 'gatsby';
 
 const dummyDuplicate = {
   visibility: 'hidden'
@@ -14,12 +15,11 @@ const primaryImage = {
 
 const LeftHalf = ({ data }) => {
   const { imageURL, imageTitle } = data;
-  const relImageURL = `../../assets${imageURL}`;
   return (
     <React.Fragment>
       <div style={dummyDuplicate} />
       <div className="primary-image-container">
-        <img src={relImageURL} alt={imageTitle} style={primaryImage} />
+        <img src={withPrefix(imageURL)} alt={imageTitle} style={primaryImage} />
       </div>
     </React.Fragment>
   );
