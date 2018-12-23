@@ -1,21 +1,14 @@
 import * as React from 'react';
-import * as PropTypes from 'prop-types';
 
 const RightHalf = ({ data }) => {
-  const { title, subtitle } = data;
+  const { frontmatter, html } = data;
   return (
-    <div className="fifty-fifty-right-half-root">
-      <h1>{title}</h1>
-      <p>{subtitle}</p>
+    <div className="fifty-fifty-root-right-half">
+      <h1>{frontmatter.title}</h1>
+      <p>{frontmatter.subtitle}</p>
+      <div dangerouslySetInnerHTML={{ __html: html }} />
     </div>
   );
-};
-
-RightHalf.propTypes = {
-  data: PropTypes.shape({
-    title: PropTypes.string,
-    subtitle: PropTypes.string
-  }).isRequired
 };
 
 export default RightHalf;
