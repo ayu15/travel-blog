@@ -1,7 +1,5 @@
 backend:
-  name: github
-  repo: ayu15/travel-blog
-  branch: deployment # Branch to update (optional; defaults to master)
+  name: git-gateway
 
 media_folder: 'static/img' # Media files will be stored in the repo under static/img
 public_folder: '/img'
