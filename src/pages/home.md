@@ -6,4 +6,5 @@ subtitle: 'SOME SUNTITLE'
 imageTitle: 'Primary Pic'
 imageURL: '/img/travel-blogger.jpg'
 thumbURL: 'thumb pic url'
+body: 'body'
 ---
