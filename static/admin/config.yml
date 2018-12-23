@@ -28,3 +28,4 @@ collections:
       - { label: 'Pics', name: 'imageURL', widget: 'image' }
       - { label: 'Pics Title', name: 'imageTitle', widget: 'string' }
       - { label: 'Thumbnail pic', name: 'thumbURL', widget: 'image' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }

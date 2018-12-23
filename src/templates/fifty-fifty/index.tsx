@@ -4,8 +4,9 @@ import { graphql } from 'gatsby';
 import SimpleAppBarLayout from '../../layouts/simple-app-bar';
 import LeftHalf from './left-half';
 import RightHalf from './right-half';
+import { MdPostFrontmatterI } from '../../types';
 
-const FiftyFiftyTemplate = ({ data }) => {
+const FiftyFiftyTemplate = ({ data }: MdPostFrontmatterI) => {
   const { markdownRemark } = data;
   return (
     <React.Fragment>
@@ -29,6 +30,7 @@ export const query = graphql`
         imageTitle
         subtitle
         date
+        body
       }
     }
   }
