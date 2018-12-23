@@ -1,13 +1,16 @@
 import * as React from 'react';
 import * as PropTypes from 'prop-types';
+import Typography from '@material-ui/core/Typography';
 
 const RightHalf = ({ data }) => {
-  const { title, subtitle, body } = data;
+  const { frontmatter, html } = data;
   return (
-    <div className="fifty-fifty-right-half-root">
-      <h1>{title}</h1>
-      <p>{subtitle}</p>
-      <div>{body}</div>
+    <div className="fifty-fifty-root-right-half">
+      <Typography variant="display1">{frontmatter.title}</Typography>
+      <Typography variant="subheading" gutterBottom>
+        {frontmatter.subtitle}
+      </Typography>
+      <div dangerouslySetInnerHTML={{ __html: html }} />
     </div>
   );
 };
