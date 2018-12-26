@@ -10,6 +10,7 @@
   "dependencies": {
     "@material-ui/core": "^3.2.2",
     "@material-ui/icons": "^3.0.1",
+    "disqus-react": "^1.0.5",
     "gatsby": "^2.0.0",
     "gatsby-plugin-netlify-cms": "^3.0.9",
     "gatsby-plugin-react-helmet": "^3.0.0",
@@ -26,7 +27,7 @@
     "react-helmet": "^5.2.0",
     "react-typography": "^0.16.18",
     "typography": "^0.16.18",
-    "typography-theme-st-annes": "^0.16.18"
+    "typography-theme-us-web-design-standards": "^0.16.18"
   },
   "devDependencies": {
     "@types/react-helmet": "^5.0.7",

@@ -2,7 +2,6 @@ import * as React from 'react';
 import * as PropTypes from 'prop-types';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
 import { StaticQuery, graphql, Link } from 'gatsby';
 
 const style = {
@@ -21,9 +20,7 @@ const _simpleAppBar = ({ data }) => {
       <AppBar position="fixed" style={style}>
         <Toolbar>
           <Link to={'/'} style={{ textDecoration: 'none', color: 'inherit' }}>
-            <Typography variant="h5" color="inherit">
-              {title}
-            </Typography>
+            <h2 style={{ margin: 'auto' }}>{title}</h2>
           </Link>
         </Toolbar>
       </AppBar>

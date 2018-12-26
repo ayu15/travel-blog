@@ -1,5 +1,10 @@
 import Typography from 'typography';
-import stAnnesTheme from 'typography-theme-st-annes';
+import usWebDesignStandardsTheme from 'typography-theme-us-web-design-standards';
 
-const typography = new Typography(stAnnesTheme);
+usWebDesignStandardsTheme.baseFontSize = '16px';
+usWebDesignStandardsTheme.baseLineHeight = 1.48;
+usWebDesignStandardsTheme.scale = 2;
+usWebDesignStandardsTheme.rhythm = 1;
+
+const typography = new Typography(usWebDesignStandardsTheme);
 export default typography;

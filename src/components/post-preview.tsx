@@ -3,7 +3,6 @@ import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
-import Typography from '@material-ui/core/Typography';
 import { Link } from 'gatsby';
 import { withPrefix } from 'gatsby';
 
@@ -14,8 +13,8 @@ const cardStyle = {
 const PostPreview = props => {
   const { postInfo } = props;
   return (
-    <Card style={cardStyle}>
-      <Link to={postInfo.slug} style={{ textDecoration: 'none' }}>
+    <Card style={cardStyle} className="post-preview-card">
+      <Link to={postInfo.slug} style={{ textDecoration: 'none', color: 'inherit' }}>
         <CardMedia
           component="img"
           className="preview-image"
@@ -24,16 +23,10 @@ const PostPreview = props => {
           title={postInfo.imageTitle}
         />
         <CardActionArea>
-          <CardContent>
-            <Typography variant="headline" color="primary">
-              {postInfo.title}
-            </Typography>
-            <Typography gutterBottom variant="caption" color="secondary" paragraph>
-              {postInfo.date}
-            </Typography>
-            <Typography variant="subtitle1" color="textSecondary">
-              {postInfo.subtitle}
-            </Typography>
+          <CardContent className="content">
+            <h2 className="content-title">{postInfo.title}</h2>
+            <p className="content-date"> {postInfo.date}</p>
+            <div>{postInfo.subtitle}</div>
           </CardContent>
         </CardActionArea>
       </Link>

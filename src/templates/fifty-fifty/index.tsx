@@ -32,6 +32,9 @@ export const query = graphql`
         date
       }
       html
+      fields {
+        slug
+      }
     }
   }
 `;
