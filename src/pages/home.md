@@ -1,10 +1,10 @@
 ---
-template: 'side-masonry'
+template: side-masonry
 date: 'Nov 21, 2018'
-title: 'HOMEPAGE'
-subtitle: 'SOME SUNTITLE'
-imageTitle: 'Primary Pic'
-imageURL: '/img/travel-blogger.jpg'
-thumbURL: 'thumb pic url'
-body: 'body'
+title: HOMEPAGE
+subtitle: SOME SUNTITLE
+imageURL: /img/kalpa.jpg
+imageTitle: Primary Pic
+thumbURL: /img/kalpa-thumb.jpg
 ---
+Homepage ki body
