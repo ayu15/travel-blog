@@ -1,10 +1,10 @@
 ---
 template: side-masonry
-date: 'Nov 21, 2018'
+date: 'Jan 12, 2019'
 title: HOMEPAGE
-subtitle: SOME SUNTITLE
-imageURL: /img/kalpa.jpg
-imageTitle: Primary Pic
-thumbURL: /img/kalpa-thumb.jpg
+subtitle: Subtitle of my blog
+imageURL: /img/travel-blogger-ayush.jpg
+imageTitle: Ayush's blog pic
+thumbURL: /img/travel-blogger-ayush.jpg
 ---
-Homepage ki body
+Body of my blog's homepage
