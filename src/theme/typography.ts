@@ -5,6 +5,14 @@ usWebDesignStandardsTheme.baseFontSize = '16px';
 usWebDesignStandardsTheme.baseLineHeight = 1.25;
 usWebDesignStandardsTheme.scale = 1.6;
 usWebDesignStandardsTheme.rhythm = 1;
+usWebDesignStandardsTheme.overrideThemeStyles = ({ rhythm }, options) => ({
+  h5: {
+    marginBottom: rhythm(1 / 4)
+  },
+  hr: {
+    marginBottom: rhythm(1 / 2)
+  }
+});
 
 const typography = new Typography(usWebDesignStandardsTheme);
 export default typography;

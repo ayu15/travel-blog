@@ -10,7 +10,7 @@ thumbURL: /img/kheer-gang-thumb.jpg
 
 Located in the Parvati Valley, this is a mystical place which we should not just visit but stay there for some days.
 
-#### About the place
+##### About the place
 
 ---
 
@@ -20,13 +20,13 @@ Upon reaching Kheer Ganga, there is just one trademark place to visit, that is t
 
 ![alt text](https://res.cloudinary.com/blogs1/image/upload/v1547365997/prod-blog/travel/kheer-ganga-pond.jpg 'Kheer Ganga hot water pond')
 
-#### Getting there
+##### Getting there
 
 ---
 
 Nearby town with amenities and road connection is Barsheni. One can reach Barsheni by road, you can even drive your own car, bike there and park it near the Barsheni Dam. Journey from Barsheni Dam to Kheer Ganga will be on foot. Prefer the Kalgha route, however in winters or if you are anticipating walking few km in low light then locals usually advice Nakthan route. Avoid walking in night, its risky and there is danger of wild animals.
 
-#### When to visit
+##### When to visit
 
 ---
 
