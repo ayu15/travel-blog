@@ -7,8 +7,6 @@ const dummyDuplicate = {
 };
 
 const primaryImage = {
-  objectFit: 'cover',
-  objectPosition: 'center top',
   height: '100%',
   width: '100%'
 };
