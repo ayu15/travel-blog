@@ -9,22 +9,18 @@ const style = {
   color: '#fff'
 };
 
-const hiddenTrick = {
-  visibility: 'hidden'
-};
-
 const _simpleAppBar = ({ data }) => {
-  const title = data.site.siteMetadata.title;
+  const appbarHeader = data.site.siteMetadata.appbarHeader;
   return (
     <React.Fragment>
       <AppBar position="fixed" style={style}>
         <Toolbar>
           <Link to={'/'} style={{ textDecoration: 'none', color: 'inherit' }}>
-            <h2 style={{ margin: 'auto' }}>{title}</h2>
+            <h2 style={{ margin: 'auto' }}>{appbarHeader}</h2>
           </Link>
         </Toolbar>
       </AppBar>
-      <AppBar position="static" style={hiddenTrick}>
+      <AppBar position="static" className="hidden">
         <Toolbar />
       </AppBar>
     </React.Fragment>
@@ -37,7 +33,7 @@ const SimpleAppBar = () => (
       query {
         site {
           siteMetadata {
-            title
+            appbarHeader
           }
         }
       }

@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    appbarHeader: 'My Adventures Blog',
-    title: 'Travel Blog | Ayush Sharma',
+    appbarHeader: 'Droplets of Dream',
+    title: 'Droplets of Dream | Travel Blog | Ayush Sharma',
     description: 'This is my adventures blog.'
   },
   plugins: [
