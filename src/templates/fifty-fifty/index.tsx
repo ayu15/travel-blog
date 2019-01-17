@@ -11,7 +11,7 @@ const FiftyFiftyTemplate = ({ data }: MdPostFrontmatterI) => {
   return (
     <React.Fragment>
       <div className="app-root">
-        <SimpleAppBarLayout />
+        <SimpleAppBarLayout data={markdownRemark.frontmatter} />
         <div className="fifty-fifty-root">
           <LeftHalf data={markdownRemark.frontmatter} />
           <RightHalf data={markdownRemark} />
@@ -30,6 +30,10 @@ export const query = graphql`
         imageTitle
         subtitle
         date
+        meta {
+          title
+          description
+        }
       }
       html
       fields {

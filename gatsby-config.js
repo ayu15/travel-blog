@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
     appbarHeader: 'Droplets of Dream',
-    title: 'Droplets of Dream | Travel Blog | Ayush Sharma',
-    description: 'This is my adventures blog.'
+    title: ' - travel blog | Ayush Sharma',
+    author: 'Ayush Sharma'
   },
   plugins: [
     `gatsby-plugin-typescript`,

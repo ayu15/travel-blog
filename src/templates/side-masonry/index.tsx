@@ -12,7 +12,7 @@ const SideMasonryTemplate = ({ data }) => {
   return (
     <React.Fragment>
       <div className="app-root">
-        <SimpleAppBarLayout />
+        <SimpleAppBarLayout data={homepage.node.frontmatter} />
         <div className="fifty-fifty-root">
           <LeftHalf data={homepage.node.frontmatter} />
           <RightHalf allMarkdownRemark={allMarkdownRemark} />
@@ -34,6 +34,10 @@ export const query = graphql`
             subtitle
             date
             thumbURL
+            meta {
+              title
+              description
+            }
           }
           fields {
             slug

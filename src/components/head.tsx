@@ -1,20 +1,24 @@
 import * as React from 'react';
 import Helmet from 'react-helmet';
-import { StaticQuery, graphql, Link } from 'gatsby';
+import { StaticQuery, graphql } from 'gatsby';
 
 const _head = ({ data }) => {
-  const title = data.site.siteMetadata.title;
+  const { site, meta } = data;
+  const title = `${meta.title}${site.siteMetadata.title}`;
   return (
     <Helmet>
       <title>{title}</title>
-      <meta charset="UTF-8" />
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name="author" content={site.siteMetadata.author} />
+      <meta name="description" content={meta.description} />
       {/* <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" /> */}
       <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js" />
     </Helmet>
   );
 };
 
-const Head = () => (
+const Head = ({ meta }) => (
   <StaticQuery
     query={graphql`
       query {
@@ -25,7 +29,7 @@ const Head = () => (
         }
       }
     `}
-    render={data => <_head data={data} />}
+    render={data => <_head data={{ ...data, meta }} />}
   />
 );
 

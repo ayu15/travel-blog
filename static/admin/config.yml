@@ -29,3 +29,13 @@ collections:
       - { label: 'Pics Title', name: 'imageTitle', widget: 'string' }
       - { label: 'Thumbnail pic', name: 'thumbURL', widget: 'image' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
+      - {
+          label: 'Meta',
+          name: 'meta',
+          widget: 'object',
+          fields:
+            [
+              { label: 'Title', name: 'title', widget: 'string' },
+              { label: 'Description', name: 'description', widget: 'string' },
+            ],
+        }

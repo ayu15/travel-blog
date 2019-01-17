@@ -6,6 +6,9 @@ subtitle: '"Where God meditates"'
 imageURL: /img/kheer-ganga-full.jpg
 imageTitle: Kheer Ganga trek in winter
 thumbURL: /img/kheer-gang-thumb.jpg
+meta:
+  description: meta description
+  title: meta title
 ---
 
 Located in the Parvati Valley, this is a mystical place which we should not just visit but stay there for some days.

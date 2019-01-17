@@ -4,10 +4,11 @@ import SalmonCeleryHoney from '../../theme/salmon-celery-honey';
 import SimpleAppBar from '../../components/simple-app-bar';
 import Head from '../../components/head';
 
-const SimpleAppBarLayout = () => {
+const SimpleAppBarLayout = ({ data }) => {
+  const { meta } = data;
   return (
     <React.Fragment>
-      <Head />
+      <Head meta={meta} />
       <MuiThemeProvider theme={SalmonCeleryHoney}>
         <SimpleAppBar />
       </MuiThemeProvider>

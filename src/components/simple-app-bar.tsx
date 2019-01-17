@@ -46,7 +46,7 @@ _simpleAppBar.propTypes = {
   data: PropTypes.shape({
     site: PropTypes.shape({
       siteMetadata: PropTypes.shape({
-        title: PropTypes.string.isRequired
+        appbarHeader: PropTypes.string.isRequired
       }).isRequired
     }).isRequired
   }).isRequired
