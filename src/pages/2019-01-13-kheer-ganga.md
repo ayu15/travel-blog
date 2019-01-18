@@ -2,13 +2,16 @@
 template: fifty-fifty
 date: 'Jan 13, 2019'
 title: Kheer Ganga
-subtitle: '"Where God meditates"'
+subtitle: '"Where God meditates."'
 imageURL: /img/kheer-ganga-full.jpg
-imageTitle: Kheer Ganga trek in winter
-thumbURL: /img/kheer-gang-thumb.jpg
+imageTitle: Kheer Ganga trek route in winter
+thumbURL: /img/kheer-ganga-thumb.jpg
 meta:
-  description: meta description
-  title: meta title
+  description: >-
+    Journey to Kheer Ganga is beautiful. This travel blog by Ayush summarizes
+    the trekking experiences to Khir Ganga in winters. Preferrable base location
+    is Kalgha rather than Kasol, Manikarn or Tosh.
+  title: Kheer Ganga trek
 ---
 
 Located in the Parvati Valley, this is a mystical place which we should not just visit but stay there for some days.
