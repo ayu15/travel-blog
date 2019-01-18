@@ -1,0 +1,6 @@
+{
+    "editor.formatOnSave": true,
+    "html.format.endWithNewline": true,
+    "tslint.autoFixOnSave": true,
+  }
+  
