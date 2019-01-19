@@ -29,6 +29,12 @@ module.exports = {
       options: {
         lang: 'en'
       }
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: 'UA-132763679-1'
+      }
     }
   ]
 };
