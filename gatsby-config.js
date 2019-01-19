@@ -2,7 +2,8 @@ module.exports = {
   siteMetadata: {
     appbarHeader: 'Droplets of Dream',
     title: ' - travel blog | Ayush Sharma',
-    author: 'Ayush Sharma'
+    author: 'Ayush Sharma',
+    favicon: '/img/trekking32x32.png'
   },
   plugins: [
     `gatsby-plugin-typescript`,
@@ -22,6 +23,12 @@ module.exports = {
       }
     },
     `gatsby-plugin-sass`,
-    `gatsby-plugin-netlify-cms`
+    `gatsby-plugin-netlify-cms`,
+    {
+      resolve: 'gatsby-plugin-html-attributes',
+      options: {
+        lang: 'en'
+      }
+    }
   ]
 };
