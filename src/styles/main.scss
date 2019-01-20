@@ -1,5 +1,18 @@
 @import './variables.scss';
 
+.app-root {
+  .simple-link {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .brand-title {
+    font-size: 150%;
+    line-height: 100%;
+    margin: auto;
+  }
+}
+
 /* Desktop view */
 @media (min-width: 721px) {
   .app-root {
@@ -18,16 +31,7 @@
       position: fixed;
       left: 0;
       width: 49vw;
-      height: 90%;
-    }
-
-    .preview-image {
-      transform: scale(1);
-      transition: 0.3s ease-in-out;
-
-      &:hover {
-        transform: scale(1.3) !important;
-      }
+      height: 95%;
     }
 
     &-right-half {
@@ -46,6 +50,20 @@
     .post-preview-card {
       margin-bottom: 1rem;
 
+      figure {
+        overflow: hidden;
+        margin-bottom: 0;
+
+        .preview-image {
+          transform: scale(1);
+          transition: 0.3s ease-in-out;
+
+          &:hover {
+            transform: scale(1.3) !important;
+          }
+        }
+      }
+
       .content {
         padding-top: 0;
 
@@ -58,6 +76,10 @@
         &-date {
           color: $secondary-color;
         }
+      }
+
+      &:hover {
+        background: $background-grey;
       }
     }
   }
