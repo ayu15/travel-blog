@@ -1,0 +1,41 @@
+backend:
+  name: git-gateway
+  accept_roles: admin
+  branch: deployment
+
+media_folder: 'static/img' # Media files will be stored in the repo under static/img
+public_folder: '/img'
+
+# The src attribute for uploaded media will begin with /images/uploads
+# media_folder specifies where uploaded files are saved in the repo, public_folder indicates where they are found in the published site.
+# Image src attributes use this path, which is relative to the file where it's called.
+# For this reason, we usually start the path at the site root, using the opening /.
+# collections is due to be added here
+# filters can also be added if required.
+
+collections:
+  - name: 'posts'
+    label: 'Blog Posts'
+    description: 'My blog posts'
+    folder: 'src/pages/'
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    fields:
+      - { label: 'Template Key', name: 'template', widget: 'hidden', default: 'fifty-fifty' }
+      - { label: 'Publish Date', name: 'date', widget: 'date', format: 'MMM DD, YYYY' }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Subtitle', name: 'subtitle', widget: 'text' }
+      - { label: 'Pics', name: 'imageURL', widget: 'image' }
+      - { label: 'Pics Title', name: 'imageTitle', widget: 'string' }
+      - { label: 'Thumbnail pic', name: 'thumbURL', widget: 'image' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - {
+          label: 'Meta',
+          name: 'meta',
+          widget: 'object',
+          fields:
+            [
+              { label: 'Title', name: 'title', widget: 'string' },
+              { label: 'Description', name: 'description', widget: 'string' },
+            ],
+        }

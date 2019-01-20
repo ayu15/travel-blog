@@ -8,8 +8,33 @@
     "serve": "gatsby serve"
   },
   "dependencies": {
+    "@material-ui/core": "^3.2.2",
+    "@material-ui/icons": "^3.0.1",
+    "disqus-react": "^1.0.5",
     "gatsby": "^2.0.0",
+    "gatsby-plugin-google-analytics": "^2.0.9",
+    "gatsby-plugin-html-attributes": "^1.0.5",
+    "gatsby-plugin-netlify-cms": "^3.0.9",
+    "gatsby-plugin-react-helmet": "^3.0.0",
+    "gatsby-plugin-sass": "^2.0.4",
+    "gatsby-plugin-typescript": "^2.0.0",
+    "gatsby-plugin-typography": "^2.2.4",
+    "gatsby-source-filesystem": "^2.0.1-rc.6",
+    "gatsby-transformer-remark": "^2.1.1-rc.5",
+    "netlify-cms": "^2.2.1",
+    "node-sass": "^4.10.0",
+    "normalize.css": "^8.0.0",
     "react": "^16.5.1",
-    "react-dom": "^16.5.1"
+    "react-dom": "^16.5.1",
+    "react-helmet": "^5.2.0",
+    "react-typography": "^0.16.18",
+    "typography": "^0.16.18",
+    "typography-theme-us-web-design-standards": "^0.16.18"
+  },
+  "devDependencies": {
+    "@types/react-helmet": "^5.0.7",
+    "awesome-typescript-loader": "^5.2.1",
+    "source-map-loader": "^0.2.4",
+    "typescript": "^3.1.3"
   }
 }
