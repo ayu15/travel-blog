@@ -35,6 +35,12 @@ module.exports = {
       options: {
         trackingId: 'UA-132763679-1'
       }
+    },
+    {
+      resolve: `gatsby-plugin-styled-components`,
+      options: {
+        ssr: false
+      }
     }
   ]
 };
