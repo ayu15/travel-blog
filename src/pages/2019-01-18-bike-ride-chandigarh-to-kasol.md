@@ -43,7 +43,7 @@ Pushing each km was getting tough and Mandi was still 100km away. I decided to m
 
 ---
 
-> Enthusiasm gets you started, courage gives you acceleration, confidence makes you push to your limits and when these all fail, it's the willpower that keeps you going.
+> Enthusiasm gets you started, courage gives you acceleration, confidence makes you push to your limits and when all of these fail, it's the willpower that keeps you going.
 
 Despite 3 layers of clothing, my body was shivering at times and I was feeling uneasiness in head. I strongly made up my mind to cover 25-30 km, reach Bilaspur and stay there for the night. This last stretch was hardest but will power pumped me up and I kept going without any stops. Countdown started 25, 24, 23... reading "20 km left" was motivating rather than reading "120 km covered".
 There were few moments when road was not turning much and I could put headlights on high beam and accelerate. Switching headlights from low to high beam was providing a sudden moment of enlightening where vision is clearer, I switched gears and accelerated till the next turn.
