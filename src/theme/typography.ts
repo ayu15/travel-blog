@@ -11,6 +11,10 @@ usWebDesignStandardsTheme.overrideThemeStyles = ({ rhythm }, options) => ({
   },
   hr: {
     marginBottom: rhythm(1 / 2)
+  },
+  blockquote: {
+    fontSize: rhythm(4 / 5),
+    lineHeight: rhythm(5 / 4)
   }
 });
 
