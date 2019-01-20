@@ -1,28 +1,19 @@
-import * as React from 'react';
+import { graphql, Link, StaticQuery } from 'gatsby';
 import * as PropTypes from 'prop-types';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import { StaticQuery, graphql, Link } from 'gatsby';
-
-const style = {
-  backgroundColor: '#333',
-  color: '#fff'
-};
+import * as React from 'react';
 
 const _simpleAppBar = ({ data }) => {
   const appbarHeader = data.site.siteMetadata.appbarHeader;
   return (
     <React.Fragment>
-      <AppBar position="fixed" style={style}>
-        <Toolbar>
-          <Link to={'/'} style={{ textDecoration: 'none', color: 'inherit' }}>
-            <h2 style={{ margin: 'auto' }}>{appbarHeader}</h2>
+      <nav className="navbar is-fixed-top is-dark" role="navigation" aria-label="main navigation">
+        <div className="navbar-brand">
+          <Link to={'/'} className="navbar-item simple-link">
+            <h1 className="brand-title">{appbarHeader}</h1>
           </Link>
-        </Toolbar>
-      </AppBar>
-      <AppBar position="static" className="hidden">
-        <Toolbar />
-      </AppBar>
+        </div>
+      </nav>
+      <nav className="navbar hidden" />
     </React.Fragment>
   );
 };
