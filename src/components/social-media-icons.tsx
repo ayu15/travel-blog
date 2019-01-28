@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { Link } from 'gatsby';
 
 const iconInstagram = {
   svg: (
@@ -132,9 +131,9 @@ const iconCollection = [iconInstagram, iconTwitter, iconFacebook, iconLinkedin];
 const SocialMediaIcons = () => {
   const socialMediaItems = icons => {
     return icons.map((icon, index) => (
-      <Link key={index} to={icon.href} target="_blank" rel="noopener" className="icons">
+      <a key={index} href={icon.href} target="_blank" rel="noopener" className="icons">
         {icon.svg}
-      </Link>
+      </a>
     ));
   };
   return <React.Fragment>{socialMediaItems(iconCollection)}</React.Fragment>;
