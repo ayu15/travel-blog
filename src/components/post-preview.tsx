@@ -5,10 +5,10 @@ import { withPrefix } from 'gatsby';
 const PostPreview = props => {
   const { postInfo } = props;
   return (
-    <div className="card post-preview-card ">
-      <Link to={postInfo.slug} className="simple-link">
+    <div className="card post-preview-card">
+      <Link to={postInfo.slug} className="card post-preview-card simple-link">
         <div className="card-image">
-          <figure className="is-16by9">
+          <figure className="is-16by9" aria-label={postInfo.imageTitle}>
             <img className="preview-image" src={withPrefix(postInfo.thumbURL)} alt={postInfo.imageTitle} />
           </figure>
         </div>
