@@ -17,6 +17,7 @@ const FiftyFiftyTemplate = ({ data }: MdPostFrontmatterI) => {
           <RightHalf data={markdownRemark} />
         </div>
       </div>
+      <script type="text/javascript" async defer src="https://identity.netlify.com/v1/netlify-identity-widget.js" />
     </React.Fragment>
   );
 };
